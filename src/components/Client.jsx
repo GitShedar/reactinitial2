@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 
 function Client() {
 
   const [res, setRes] = useState(false);
+  const [load, setLoad] = useState(true);
+
+  setLoad(false)
 
   fetch('./api/pets', {
     method: 'POST',
@@ -17,6 +20,7 @@ function Client() {
   })
 
   .then(res => setRes(true))
+  .then(() => setLoad(true))
    .catch(error => setRes(false))
 
 
