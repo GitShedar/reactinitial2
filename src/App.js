@@ -1,6 +1,7 @@
 import './App.css'
 import React, {useState, useEffect} from 'react';
 import Searchbar from 'material-ui-search-bar';
+import Client from "./components/Client";
 
 
 const App = () => {
